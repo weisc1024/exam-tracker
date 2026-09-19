@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>exam-tracker · 30 天考试窗口</title>
+<meta name="description" content="国家职业资格考试 & 学历提升考试 · 30 天倒计时工作台">
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --card: #ffffff;
+    --border: #e8e6df;
+    --text: #1f1d1a;
+    --text-2: #6b665d;
+    --text-3: #9c968a;
+    --accent: #2f4ad0;
+    --accent-2: #e8edf8;
+    --red: #d92d20;
+    --red-2: #fee4e2;
+    --orange: #d97706;
+    --orange-2: #fef3c7;
+    --green: #16a34a;
+    --green-2: #dcfce7;
+    --gray-2: #f1efea;
+    --shadow: 0 1px 3px rgba(0,0,0,.04), 0 1px 2px rgba(0,0,0,.06);
+    --radius: 12px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14140f;
+      --card: #1f1e1a;
+      --border: #2d2b26;
+      --text: #f4f3ee;
+      --text-2: #aaa49a;
+      --text-3: #7a746a;
+      --accent: #6b8eff;
+      --accent-2: #1c2a52;
+      --red: #ff6b5e;
+      --red-2: #3a1a17;
+      --orange: #fbbf24;
+      --orange-2: #3a2c10;
+      --green: #4ade80;
+      --green-2: #14291a;
+      --gray-2: #25241f;
+      --shadow: 0 1px 3px rgba(0,0,0,.3), 0 1px 2px rgba(0,0,0,.4);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .container { max-width: 980px; margin: 0 auto; padding: 24px 20px 60px; }
+  /* Header */
+  header { margin-bottom: 24px; }
+  .title-row { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  h1 { margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -.5px; }
+  .subtitle { color: var(--text-2); font-size: 13px; margin-top: 4px; }
+  .stats { display: flex; gap: 8px; flex-wrap: wrap; }
+  .stat { background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; font-size: 12px; color: var(--text-2); }
+  .stat b { color: var(--text); font-weight: 600; }
+  /* Tabs */
+  .tabs { display: flex; gap: 4px; margin: 16px 0 12px; border-bottom: 1px solid var(--border); }
+  .tab { padding: 10px 16px; background: none; border: none; cursor: pointer; color: var(--text-2); font-size: 14px; font-weight: 500; border-bottom: 2px solid transparent; transition: all .2s; }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab .count { background: var(--gray-2); border-radius: 999px; padding: 1px 8px; font-size: 11px; margin-left: 6px; }
+  /* Filter */
+  .filter-row { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
+  .filter-row input[type=search] { flex: 1; min-width: 200px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--card); color: var(--text); font-size: 13px; outline: none; }
+  .filter-row input[type=search]:focus { border-color: var(--accent); }
+  .filter-row select { padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--card); color: var(--text); font-size: 13px; }
+  /* Group */
+  .group { margin-bottom: 24px; }
+  .group-title { font-size: 13px; font-weight: 600; color: var(--text-2); margin: 16px 0 10px; display: flex; align-items: center; gap: 8px; }
+  .group-title .badge { font-size: 11px; padding: 2px 8px; border-radius: 999px; font-weight: 500; }
+  .group-title .badge.red { background: var(--red-2); color: var(--red); }
+  .group-title .badge.orange { background: var(--orange-2); color: var(--orange); }
+  .group-title .badge.green { background: var(--green-2); color: var(--green); }
+  /* Card */
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 8px; box-shadow: var(--shadow); display: flex; align-items: center; gap: 14px; transition: all .15s; }
+  .card:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,.06); }
+  .card .left { flex: 1; min-width: 0; }
+  .card .name { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+  .card .meta { display: flex; gap: 12px; font-size: 12px; color: var(--text-2); flex-wrap: wrap; }
+  .card .meta .tag { padding: 1px 8px; border-radius: 4px; background: var(--gray-2); }
+  .card .meta .tag.evt-报名开始 { color: var(--green); background: var(--green-2); }
+  .card .meta .tag.evt-报名截止 { color: var(--red); background: var(--red-2); }
+  .card .meta .tag.evt-考试日 { color: var(--orange); background: var(--orange-2); }
+  .card .right { text-align: right; min-width: 110px; }
+  .card .days { font-size: 22px; font-weight: 700; line-height: 1; }
+  .card .days-label { font-size: 11px; color: var(--text-2); margin-top: 2px; }
+  .card .days.t-red { color: var(--red); }
+  .card .days.t-orange { color: var(--orange); }
+  .card .days.t-green { color: var(--green); }
+  .card a { color: inherit; text-decoration: none; }
+  /* Empty */
+  .empty { background: var(--card); border: 1px dashed var(--border); border-radius: var(--radius); padding: 32px 16px; text-align: center; color: var(--text-2); }
+  /* Footer */
+  footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--text-3); font-size: 12px; text-align: center; }
+  footer a { color: var(--text-2); text-decoration: none; border-bottom: 1px dotted var(--text-3); }
+  /* Responsive */
+  @media (max-width: 600px) {
+    .card { flex-direction: column; align-items: stretch; gap: 8px; }
+    .card .right { text-align: left; }
+  }
+  .github-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: var(--text); color: var(--bg); border-radius: 999px; font-size: 12px; text-decoration: none; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="title-row">
+    <div>
+      <h1>📅 考试日历 · 30 天窗口</h1>
+      <div class="subtitle" id="subtitle">加载中…</div>
+    </div>
+    <a class="github-btn" href="https://github.com/yourname/exam-tracker" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.2-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0012 .3"/></svg>
+      GitHub
+    </a>
+  </div>
+
+  <div class="stats" id="stats" style="margin-top:16px"></div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="all">全部 <span class="count" id="cnt-all">0</span></button>
+    <button class="tab" data-tab="职业资格">职业资格 <span class="count" id="cnt-zi">0</span></button>
+    <button class="tab" data-tab="学历提升">学历提升 <span class="count" id="cnt-xue">0</span></button>
+  </div>
+
+  <div class="filter-row">
+    <input type="search" id="search" placeholder="搜索考试项目…">
+    <select id="filter-month">
+      <option value="">全部月份</option>
+    </select>
+    <select id="filter-type">
+      <option value="">全部事件</option>
+      <option value="报名开始">报名开始</option>
+      <option value="报名截止">报名截止</option>
+      <option value="考试日">考试日</option>
+    </select>
+  </div>
+</header>
+
+<main id="content">加载中…</main>
+
+<footer>
+  数据来源：<a href="https://www.cpta.com.cn/" target="_blank" rel="noopener">中国人事考试网</a> ·
+  <a href="https://www.neea.cn/" target="_blank" rel="noopener">中国教育考试网</a> ·
+  仅供参考，以官方公告为准
+</footer>
+
+</div>
+
+<script>
+/* ---------- 数据加载 ---------- */
+const EXAMS_URL = './exams.json';
+
+let allEvents = [];
+
+async function loadExams() {
+  const res = await fetch(EXAMS_URL);
+  if (!res.ok) throw new Error('Failed to load exams.json');
+  return res.json();
+}
+
+/* ---------- 30 天窗口计算 ---------- */
+function parseDate(s) {
+  if (!s) return null;
+  const d = new Date(s + 'T00:00:00');
+  return isNaN(d.getTime()) ? null : d;
+}
+function daysLeft(d) {
+  if (!d) return null;
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
+  return Math.round((d - now) / 86400000);
+}
+function inWindow(d) {
+  const left = daysLeft(d);
+  return left !== null && left >= 0 && left <= 30;
+}
+
+function buildEvents(exams) {
+  const events = [];
+  for (const ex of exams) {
+    for (const [field, type] of [['register_start','报名开始'], ['register_end','报名截止'], ['exam_date','考试日']]) {
+      const d = parseDate(ex[field]);
+      if (d && inWindow(d)) {
+        events.push({
+          exam_id: ex.id,
+          name: ex.name,
+          category: ex.category,
+          event_type: type,
+          date: ex[field],
+          days_left: daysLeft(d),
+          url: ex.url || ''
+        });
+      }
+    }
+  }
+  events.sort((a, b) => a.days_left - b.days_left || a.name.localeCompare(b.name));
+  return events;
+}
+
+/* ---------- 渲染 ---------- */
+let currentTab = 'all';
+function setTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab').forEach(el => {
+    el.classList.toggle('active', el.dataset.tab === tab);
+  });
+  render();
+}
+
+function urgencyBadge(days) {
+  if (days <= 3) return { color: 'red',    label: '🔴 紧急' };
+  if (days <= 7) return { color: 'orange', label: '🟡 一周内' };
+  if (days <= 14) return { color: 'green',  label: '🟢 两周内' };
+  return { color: 'green', label: '🟢 30 天内' };
+}
+
+function daysColor(days) {
+  if (days <= 3) return 't-red';
+  if (days <= 7) return 't-orange';
+  return 't-green';
+}
+
+function groupByUrgency(events) {
+  const groups = {
+    'critical': [],   // <= 3 天
+    'week':     [],   // 4-7 天
+    'twoweek':  [],   // 8-14 天
+    'later':    [],   // 15-30 天
+  };
+  for (const e of events) {
+    if (e.days_left <= 3) groups.critical.push(e);
+    else if (e.days_left <= 7) groups.week.push(e);
+    else if (e.days_left <= 14) groups.twoweek.push(e);
+    else groups.later.push(e);
+  }
+  return groups;
+}
+
+function eventCard(e) {
+  const u = urgencyBadge(e.days_left);
+  const daysTxt = e.days_left === 0 ? '今天' : (e.days_left === 1 ? '明天' : e.days_left + ' 天');
+  const tagClass = 'tag evt-' + e.event_type;
+  const nameHtml = e.url
+    ? `<a href="${e.url}" target="_blank" rel="noopener">${e.name}</a>`
+    : e.name;
+  return `
+    <div class="card">
+      <div class="left">
+        <div class="name">${nameHtml}</div>
+        <div class="meta">
+          <span class="${tagClass}">${e.event_type}</span>
+          <span>${e.date}</span>
+          <span class="tag">${e.category}</span>
+          <span>${u.label}</span>
+        </div>
+      </div>
+      <div class="right">
+        <div class="days ${daysColor(e.days_left)}">${e.days_left < 0 ? '已过' : daysTxt}</div>
+        <div class="days-label">${e.days_left <= 0 ? '' : '后'}</div>
+      </div>
+    </div>`;
+}
+
+function render() {
+  // 过滤
+  const q = (document.getElementById('search').value || '').trim().toLowerCase();
+  const month = document.getElementById('filter-month').value;
+  const type = document.getElementById('filter-type').value;
+
+  let events = allEvents;
+  if (currentTab !== 'all') events = events.filter(e => e.category === currentTab);
+  if (q) events = events.filter(e => e.name.toLowerCase().includes(q));
+  if (month) events = events.filter(e => e.date.startsWith(month));
+  if (type) events = events.filter(e => e.event_type === type);
+
+  const container = document.getElementById('content');
+
+  if (events.length === 0) {
+    container.innerHTML = '<div class="empty">当前筛选条件下无 30 天窗口内事件</div>';
+    return;
+  }
+
+  const groups = groupByUrgency(events);
+  let html = '';
+  const map = [
+    ['critical', '紧急（≤3 天）', 'red'],
+    ['week',     '一周内（4-7 天）', 'orange'],
+    ['twoweek',  '两周内（8-14 天）', 'green'],
+    ['later',    '30 天内（15-30 天）', 'green'],
+  ];
+  for (const [key, title, badge] of map) {
+    if (groups[key].length === 0) continue;
+    html += `<div class="group">
+      <div class="group-title">${title} <span class="badge ${badge}">${groups[key].length}</span></div>`;
+    html += groups[key].map(eventCard).join('');
+    html += '</div>';
+  }
+  container.innerHTML = html;
+}
+
+function fillMonths() {
+  const sel = document.getElementById('filter-month');
+  const months = new Set();
+  for (const e of allEvents) months.add(e.date.slice(0, 7));
+  Array.from(months).sort().forEach(m => {
+    const o = document.createElement('option');
+    o.value = m; o.textContent = m;
+    sel.appendChild(o);
+  });
+}
+
+function updateStats() {
+  const total = allEvents.length;
+  const zi = allEvents.filter(e => e.category === '职业资格').length;
+  const xue = allEvents.filter(e => e.category === '学历提升').length;
+  const critical = allEvents.filter(e => e.days_left <= 3).length;
+
+  document.getElementById('cnt-all').textContent = total;
+  document.getElementById('cnt-zi').textContent = zi;
+  document.getElementById('cnt-xue').textContent = xue;
+
+  const statsEl = document.getElementById('stats');
+  statsEl.innerHTML = `
+    <div class="stat"><b>${total}</b> 项 30 天内</div>
+    ${critical > 0 ? `<div class="stat" style="color:var(--red);border-color:var(--red)"><b>${critical}</b> 项紧急（≤3 天）</div>` : ''}
+    <div class="stat">职业资格 <b>${zi}</b> · 学历提升 <b>${xue}</b></div>
+  `;
+}
+
+function setSubtitle() {
+  const now = new Date();
+  const fmt = (n) => String(n).padStart(2, '0');
+  const dateStr = `${now.getFullYear()}-${fmt(now.getMonth()+1)}-${fmt(now.getDate())}`;
+  document.getElementById('subtitle').textContent = `今天是 ${dateStr} · 数据自动每日 06:30 更新`;
+}
+
+/* ---------- 启动 ---------- */
+document.querySelectorAll('.tab').forEach(el => {
+  el.addEventListener('click', () => setTab(el.dataset.tab));
+});
+document.getElementById('search').addEventListener('input', render);
+document.getElementById('filter-month').addEventListener('change', render);
+document.getElementById('filter-type').addEventListener('change', render);
+
+(async () => {
+  setSubtitle();
+  try {
+    const exams = await loadExams();
+    allEvents = buildEvents(exams);
+    fillMonths();
+    updateStats();
+    render();
+  } catch (e) {
+    document.getElementById('content').innerHTML =
+      `<div class="empty">⚠ 数据加载失败：${e.message}<br><br>请确认 exams.json 与 index.html 在同一目录。</div>`;
+  }
+})();
+</script>
+</body>
+</html>

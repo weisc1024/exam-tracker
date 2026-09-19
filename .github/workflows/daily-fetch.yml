@@ -1,0 +1,61 @@
+name: 每日抓取考试公告
+
+on:
+  # 北京时间每天 06:30（UTC 22:30 前一天）
+  schedule:
+    - cron: '30 22 * * *'
+  # 允许手动触发（Actions → Run workflow）
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "只抓取不推送"
+        required: false
+        default: "false"
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 抓取 + 推送
+        env:
+          RSSHUB_INSTANCE: ${{ secrets.RSSHUB_INSTANCE }}
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+          FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+          WECOM_WEBHOOK: ${{ secrets.WECOM_WEBHOOK }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            echo "=== DRY RUN: 仅抓取，不推送 ==="
+            python -c "
+            import sys; sys.path.insert(0, 'scripts')
+            from fetch_rss import fetch_all, filter_relevant
+            raw = fetch_all()
+            rel = filter_relevant(raw)
+            print(f'共 {len(raw)} 条原始，{len(rel)} 条相关')
+            "
+          else
+            python scripts/fetch_rss.py
+
+      - name: 提交变更
+        if: always()
+        run: |
+          git config user.name "exam-tracker-bot"
+          git config user.email "bot@example.com"
+          git add data/announcements.json data/last_pushed.json || true
+          git diff --cached --quiet || git commit -m "chore: 更新考试公告 $(date +%F)"
+          git push || echo "无变更可推送"

@@ -1,0 +1,353 @@
+[
+  {
+    "id": "2026-zhongji-anquan",
+    "name": "中级注册安全工程师",
+    "category": "职业资格",
+    "register_start": "2026-08-04",
+    "register_end": "2026-08-25",
+    "exam_date": "2026-10-24",
+    "url": "https://www.cpta.com.cn/examNotice/2218.html"
+  },
+  {
+    "id": "2026-yiji-zaojia",
+    "name": "一级造价工程师",
+    "category": "职业资格",
+    "register_start": "2026-07-24",
+    "register_end": "2026-08-18",
+    "exam_date": "2026-10-17",
+    "url": "https://www.cpta.com.cn/examNotice/2207.html"
+  },
+  {
+    "id": "2026-yiji-xiaofang",
+    "name": "一级注册消防工程师",
+    "category": "职业资格",
+    "register_start": "2026-09-01",
+    "register_end": "2026-09-11",
+    "exam_date": "2026-11-07",
+    "url": "https://www.cpta.com.cn/examNotice/2224.html"
+  },
+  {
+    "id": "2026-falv-zhuguan",
+    "name": "法律职业资格（主观题）",
+    "category": "职业资格",
+    "register_start": "2026-09-12",
+    "register_end": "2026-09-30",
+    "exam_date": "2026-10-18",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-zhuce-cehui",
+    "name": "注册测绘师",
+    "category": "职业资格",
+    "register_start": "2026-07-15",
+    "register_end": "2026-07-31",
+    "exam_date": "2026-09-05",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-yiji-jianzao",
+    "name": "一级建造师",
+    "category": "职业资格",
+    "register_start": "2026-06-10",
+    "register_end": "2026-06-30",
+    "exam_date": "2026-09-12",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-jianli-gongchengshi",
+    "name": "监理工程师",
+    "category": "职业资格",
+    "register_start": "2026-03-13",
+    "register_end": "2026-03-24",
+    "exam_date": "2026-05-16",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-zhuce-jiashi",
+    "name": "中级注册安全工程师（补考）",
+    "category": "职业资格",
+    "register_start": "2026-08-04",
+    "register_end": "2026-08-25",
+    "exam_date": "2026-10-25",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-gaoji-jingji",
+    "name": "高级经济专业技术资格",
+    "category": "职业资格",
+    "register_start": "2026-03-27",
+    "register_end": "2026-04-08",
+    "exam_date": "2026-05-30",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-chuji-jingji",
+    "name": "初级/中级经济专业技术资格",
+    "category": "职业资格",
+    "register_start": "2026-07-22",
+    "register_end": "2026-08-12",
+    "exam_date": "2026-11-07",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-zhuce-huijishi",
+    "name": "注册会计师（专业阶段）",
+    "category": "职业资格",
+    "register_start": "2026-04-07",
+    "register_end": "2026-04-30",
+    "exam_date": "2026-08-29",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-zhuce-huijishi-zonghe",
+    "name": "注册会计师（综合阶段）",
+    "category": "职业资格",
+    "register_start": "2026-04-07",
+    "register_end": "2026-04-30",
+    "exam_date": "2026-08-30",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-kuaiji-zhongji",
+    "name": "会计专业技术资格（中级）",
+    "category": "职业资格",
+    "register_start": "2026-06-12",
+    "register_end": "2026-07-02",
+    "exam_date": "2026-09-05",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-shuiwushi",
+    "name": "税务师",
+    "category": "职业资格",
+    "register_start": "2026-05-10",
+    "register_end": "2026-07-15",
+    "exam_date": "2026-11-14",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-zhiye-yaoshi",
+    "name": "执业药师（药学/中药学）",
+    "category": "职业资格",
+    "register_start": "2026-07-15",
+    "register_end": "2026-08-15",
+    "exam_date": "2026-10-31",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-daoyou",
+    "name": "导游资格",
+    "category": "职业资格",
+    "register_start": "2026-07-15",
+    "register_end": "2026-09-15",
+    "exam_date": "2026-11-21",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-yijijianzaoshi",
+    "name": "注册建筑师（一级）",
+    "category": "职业资格",
+    "register_start": "2026-03-12",
+    "register_end": "2026-03-20",
+    "exam_date": "2026-05-16",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-zhuanli",
+    "name": "专利代理师",
+    "category": "职业资格",
+    "register_start": "2026-05-25",
+    "register_end": "2026-06-15",
+    "exam_date": "2026-07-04",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-zhibing-yishi",
+    "name": "执业兽医",
+    "category": "职业资格",
+    "register_start": "2026-05-15",
+    "register_end": "2026-06-15",
+    "exam_date": "2026-07-12",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-zhongji-jiliang",
+    "name": "注册计量师",
+    "category": "职业资格",
+    "register_start": "2026-03-30",
+    "register_end": "2026-04-10",
+    "exam_date": "2026-06-13",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-fanyi",
+    "name": "翻译专业资格（一/二/三级）",
+    "category": "职业资格",
+    "register_start": "2026-04-15",
+    "register_end": "2026-05-15",
+    "exam_date": "2026-06-27",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-shehuigongzuo",
+    "name": "社会工作者职业资格",
+    "category": "职业资格",
+    "register_start": "2026-03-17",
+    "register_end": "2026-03-26",
+    "exam_date": "2026-05-23",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-jianshe-gongcheng",
+    "name": "勘察设计注册工程师（多专业）",
+    "category": "职业资格",
+    "register_start": "2026-08-15",
+    "register_end": "2026-09-15",
+    "exam_date": "2026-10-31",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-xinwen-jizhe",
+    "name": "新闻记者职业资格",
+    "category": "职业资格",
+    "register_start": "2026-09-01",
+    "register_end": "2026-09-30",
+    "exam_date": "2026-10-24",
+    "url": "https://www.cpta.com.cn/examNotice/2221.html"
+  },
+  {
+    "id": "2026-yinhang",
+    "name": "银行业专业人员职业资格",
+    "category": "职业资格",
+    "register_start": "2026-05-15",
+    "register_end": "2026-06-15",
+    "exam_date": "2026-06-13",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-zhuce-chengxiangguihua",
+    "name": "注册城乡规划师",
+    "category": "职业资格",
+    "register_start": "2026-07-15",
+    "register_end": "2026-08-15",
+    "exam_date": "2026-09-12",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-jianshe-jijian",
+    "name": "建设工程监理工程师（土木建筑工程）",
+    "category": "职业资格",
+    "register_start": "2026-03-15",
+    "register_end": "2026-03-25",
+    "exam_date": "2026-05-16",
+    "url": "https://www.cpta.com.cn/"
+  },
+  {
+    "id": "2026-yanjiusheng",
+    "name": "全国硕士研究生招生考试",
+    "category": "学历提升",
+    "register_start": "2025-10-10",
+    "register_end": "2025-10-27",
+    "exam_date": "2025-12-20",
+    "url": "https://yz.chsi.com.cn/"
+  },
+  {
+    "id": "2026-chengren-gaokao",
+    "name": "全国成人高校招生统一考试",
+    "category": "学历提升",
+    "register_start": "2026-08-15",
+    "register_end": "2026-09-15",
+    "exam_date": "2026-10-24",
+    "url": "https://chengkao.neea.edu.cn/"
+  },
+  {
+    "id": "2026-zikao-04",
+    "name": "高等教育自学考试（4 月）",
+    "category": "学历提升",
+    "register_start": "2026-02-26",
+    "register_end": "2026-03-07",
+    "exam_date": "2026-04-11",
+    "url": "https://zikao.neea.edu.cn/"
+  },
+  {
+    "id": "2026-zikao-10",
+    "name": "高等教育自学考试（10 月）",
+    "category": "学历提升",
+    "register_start": "2026-09-01",
+    "register_end": "2026-09-15",
+    "exam_date": "2026-10-24",
+    "url": "https://zikao.neea.edu.cn/"
+  },
+  {
+    "id": "2026-jiaoshi-shang",
+    "name": "中小学教师资格考试（上半年）",
+    "category": "学历提升",
+    "register_start": "2026-01-09",
+    "register_end": "2026-01-12",
+    "exam_date": "2026-03-07",
+    "url": "https://ntce.neea.edu.cn/"
+  },
+  {
+    "id": "2026-jiaoshi-xia",
+    "name": "中小学教师资格考试（下半年）",
+    "category": "学历提升",
+    "register_start": "2026-07-01",
+    "register_end": "2026-07-08",
+    "exam_date": "2026-09-12",
+    "url": "https://ntce.neea.edu.cn/"
+  },
+  {
+    "id": "2026-cet-shang",
+    "name": "大学英语四六级（CET）上半年",
+    "category": "学历提升",
+    "register_start": "2026-03-15",
+    "register_end": "2026-04-15",
+    "exam_date": "2026-06-13",
+    "url": "https://cet.neea.edu.cn/"
+  },
+  {
+    "id": "2026-cet-xia",
+    "name": "大学英语四六级（CET）下半年",
+    "category": "学历提升",
+    "register_start": "2026-09-15",
+    "register_end": "2026-10-15",
+    "exam_date": "2026-12-12",
+    "url": "https://cet.neea.edu.cn/"
+  },
+  {
+    "id": "2026-ncre-03",
+    "name": "全国计算机等级考试（3 月）",
+    "category": "学历提升",
+    "register_start": "2026-01-06",
+    "register_end": "2026-01-15",
+    "exam_date": "2026-03-28",
+    "url": "https://ncre.neea.edu.cn/"
+  },
+  {
+    "id": "2026-ncre-09",
+    "name": "全国计算机等级考试（9 月）",
+    "category": "学历提升",
+    "register_start": "2026-06-20",
+    "register_end": "2026-07-15",
+    "exam_date": "2026-09-19",
+    "url": "https://ncre.neea.edu.cn/"
+  },
+  {
+    "id": "2026-tongdeng-xueli",
+    "name": "同等学力申请硕士学位全国统考",
+    "category": "学历提升",
+    "register_start": "2026-03-10",
+    "register_end": "2026-04-10",
+    "exam_date": "2026-05-24",
+    "url": "https://tdxl.neea.edu.cn/"
+  },
+  {
+    "id": "2026-guokao-2026",
+    "name": "普通高等学校招生全国统一考试",
+    "category": "学历提升",
+    "register_start": "2025-10-15",
+    "register_end": "2025-11-15",
+    "exam_date": "2026-06-07",
+    "url": "https://gaokao.neea.edu.cn/"
+  }
+]
