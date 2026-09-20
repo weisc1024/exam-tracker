@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>exam-tracker · 30 天考试窗口</title>
-<meta name="description" content="国家职业资格考试 & 学历提升考试 · 30 天倒计时工作台">
+<title>exam-tracker · 考试日历</title>
+<meta name="description" content="国家职业资格考试 & 学历提升考试 · 30 天窗口 + 全部考试时间">
 <style>
   :root {
     --bg: #f7f6f2;
@@ -54,21 +54,26 @@
     font-size: 14px;
     line-height: 1.5;
   }
-  .container { max-width: 980px; margin: 0 auto; padding: 24px 20px 60px; }
+  .container { max-width: 1000px; margin: 0 auto; padding: 24px 20px 60px; }
   /* Header */
   header { margin-bottom: 24px; }
   .title-row { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   h1 { margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -.5px; }
   .subtitle { color: var(--text-2); font-size: 13px; margin-top: 4px; }
-  .stats { display: flex; gap: 8px; flex-wrap: wrap; }
+  .stats { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
   .stat { background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; font-size: 12px; color: var(--text-2); }
   .stat b { color: var(--text); font-weight: 600; }
+  /* View toggle */
+  .view-toggle { display: inline-flex; background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 3px; margin: 16px 0 12px; }
+  .view-toggle button { padding: 6px 16px; background: none; border: none; cursor: pointer; color: var(--text-2); font-size: 13px; font-weight: 500; border-radius: 999px; transition: all .2s; }
+  .view-toggle button.active { background: var(--accent); color: var(--bg-on-accent, #fff); }
+  .view-toggle button:hover:not(.active) { color: var(--text); }
   /* Tabs */
-  .tabs { display: flex; gap: 4px; margin: 16px 0 12px; border-bottom: 1px solid var(--border); }
-  .tab { padding: 10px 16px; background: none; border: none; cursor: pointer; color: var(--text-2); font-size: 14px; font-weight: 500; border-bottom: 2px solid transparent; transition: all .2s; }
+  .tabs { display: flex; gap: 4px; margin: 12px 0; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+  .tab { padding: 8px 14px; background: none; border: none; cursor: pointer; color: var(--text-2); font-size: 13px; font-weight: 500; border-bottom: 2px solid transparent; transition: all .2s; }
   .tab:hover { color: var(--text); }
   .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
-  .tab .count { background: var(--gray-2); border-radius: 999px; padding: 1px 8px; font-size: 11px; margin-left: 6px; }
+  .tab .count { background: var(--gray-2); border-radius: 999px; padding: 1px 7px; font-size: 11px; margin-left: 4px; }
   /* Filter */
   .filter-row { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
   .filter-row input[type=search] { flex: 1; min-width: 200px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--card); color: var(--text); font-size: 13px; outline: none; }
@@ -82,22 +87,28 @@
   .group-title .badge.orange { background: var(--orange-2); color: var(--orange); }
   .group-title .badge.green { background: var(--green-2); color: var(--green); }
   /* Card */
-  .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 8px; box-shadow: var(--shadow); display: flex; align-items: center; gap: 14px; transition: all .15s; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 8px; box-shadow: var(--shadow); transition: all .15s; }
   .card:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,.06); }
-  .card .left { flex: 1; min-width: 0; }
+  .card-top { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
+  .card-top .left { flex: 1; min-width: 0; }
   .card .name { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
-  .card .meta { display: flex; gap: 12px; font-size: 12px; color: var(--text-2); flex-wrap: wrap; }
-  .card .meta .tag { padding: 1px 8px; border-radius: 4px; background: var(--gray-2); }
-  .card .meta .tag.evt-报名开始 { color: var(--green); background: var(--green-2); }
-  .card .meta .tag.evt-报名截止 { color: var(--red); background: var(--red-2); }
-  .card .meta .tag.evt-考试日 { color: var(--orange); background: var(--orange-2); }
+  .card .name a { color: inherit; text-decoration: none; }
+  .card .name a:hover { color: var(--accent); }
   .card .right { text-align: right; min-width: 110px; }
   .card .days { font-size: 22px; font-weight: 700; line-height: 1; }
-  .card .days-label { font-size: 11px; color: var(--text-2); margin-top: 2px; }
   .card .days.t-red { color: var(--red); }
   .card .days.t-orange { color: var(--orange); }
   .card .days.t-green { color: var(--green); }
-  .card a { color: inherit; text-decoration: none; }
+  .card .days.t-gray { color: var(--text-3); }
+  .card-meta { display: flex; gap: 8px; font-size: 12px; color: var(--text-2); flex-wrap: wrap; padding-left: 0; }
+  .card-meta .tag { padding: 1px 8px; border-radius: 4px; background: var(--gray-2); }
+  .card-meta .tag.evt-报名开始 { color: var(--green); background: var(--green-2); }
+  .card-meta .tag.evt-报名截止 { color: var(--red); background: var(--red-2); }
+  .card-meta .tag.evt-考试日 { color: var(--orange); background: var(--orange-2); }
+  .card-meta .tag.inferred { color: var(--text-3); background: var(--gray-2); }
+  .card-meta .tag.source { color: var(--text-2); }
+  .card-sub { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); font-size: 12px; color: var(--text-3); }
+  .card-sub b { color: var(--text-2); font-weight: 500; }
   /* Empty */
   .empty { background: var(--card); border: 1px dashed var(--border); border-radius: var(--radius); padding: 32px 16px; text-align: center; color: var(--text-2); }
   /* Footer */
@@ -105,7 +116,7 @@
   footer a { color: var(--text-2); text-decoration: none; border-bottom: 1px dotted var(--text-3); }
   /* Responsive */
   @media (max-width: 600px) {
-    .card { flex-direction: column; align-items: stretch; gap: 8px; }
+    .card-top { flex-direction: column; align-items: stretch; gap: 8px; }
     .card .right { text-align: left; }
   }
   .github-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: var(--text); color: var(--bg); border-radius: 999px; font-size: 12px; text-decoration: none; font-weight: 500; }
@@ -117,24 +128,25 @@
 <header>
   <div class="title-row">
     <div>
-      <h1>📅 考试日历 · 30 天窗口</h1>
+      <h1>📅 考试日历 · 国家职业资格 + 学历提升</h1>
       <div class="subtitle" id="subtitle">加载中…</div>
     </div>
-    <a class="github-btn" href="https://github.com/yourname/exam-tracker" target="_blank" rel="noopener">
+    <a class="github-btn" href="https://github.com/weisc1024/exam-tracker" target="_blank" rel="noopener">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.2-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0012 .3"/></svg>
       GitHub
     </a>
   </div>
 
-  <div class="stats" id="stats" style="margin-top:16px"></div>
+  <div class="stats" id="stats"></div>
 
-  <div class="tabs">
-    <button class="tab active" data-tab="all">全部 <span class="count" id="cnt-all">0</span></button>
-    <button class="tab" data-tab="职业资格">职业资格 <span class="count" id="cnt-zi">0</span></button>
-    <button class="tab" data-tab="学历提升">学历提升 <span class="count" id="cnt-xue">0</span></button>
+  <div class="view-toggle" id="view-toggle">
+    <button class="active" data-view="window">30 天窗口</button>
+    <button data-view="all">全部考试</button>
   </div>
 
-  <div class="filter-row">
+  <div class="tabs" id="tabs"></div>
+
+  <div class="filter-row" id="filter-row" style="display:none">
     <input type="search" id="search" placeholder="搜索考试项目…">
     <select id="filter-month">
       <option value="">全部月份</option>
@@ -159,18 +171,22 @@
 </div>
 
 <script>
-/* ---------- 数据加载 ---------- */
+/* ---------- 配置 ---------- */
 const EXAMS_URL = './exams.json';
 
+let allExams = [];
 let allEvents = [];
+let currentView = 'window';   // 'window' | 'all'
+let currentTab = 'all';
 
+/* ---------- 数据加载 ---------- */
 async function loadExams() {
   const res = await fetch(EXAMS_URL);
   if (!res.ok) throw new Error('Failed to load exams.json');
   return res.json();
 }
 
-/* ---------- 30 天窗口计算 ---------- */
+/* ---------- 日期工具 ---------- */
 function parseDate(s) {
   if (!s) return null;
   const d = new Date(s + 'T00:00:00');
@@ -187,6 +203,7 @@ function inWindow(d) {
   return left !== null && left >= 0 && left <= 30;
 }
 
+/* ---------- 30 天窗口事件构建 ---------- */
 function buildEvents(exams) {
   const events = [];
   for (const ex of exams) {
@@ -194,51 +211,97 @@ function buildEvents(exams) {
       const d = parseDate(ex[field]);
       if (d && inWindow(d)) {
         events.push({
-          exam_id: ex.id,
-          name: ex.name,
-          category: ex.category,
+          exam: ex,
           event_type: type,
           date: ex[field],
           days_left: daysLeft(d),
-          url: ex.url || ''
         });
       }
     }
   }
-  events.sort((a, b) => a.days_left - b.days_left || a.name.localeCompare(b.name));
+  events.sort((a, b) => a.days_left - b.days_left || a.exam.name.localeCompare(b.exam.name));
   return events;
 }
 
-/* ---------- 渲染 ---------- */
-let currentTab = 'all';
-function setTab(tab) {
-  currentTab = tab;
-  document.querySelectorAll('.tab').forEach(el => {
-    el.classList.toggle('active', el.dataset.tab === tab);
-  });
-  render();
-}
-
+/* ---------- 渲染卡片 ---------- */
 function urgencyBadge(days) {
   if (days <= 3) return { color: 'red',    label: '🔴 紧急' };
   if (days <= 7) return { color: 'orange', label: '🟡 一周内' };
   if (days <= 14) return { color: 'green',  label: '🟢 两周内' };
   return { color: 'green', label: '🟢 30 天内' };
 }
-
 function daysColor(days) {
   if (days <= 3) return 't-red';
   if (days <= 7) return 't-orange';
   return 't-green';
 }
+function renderEventCard(e) {
+  const u = urgencyBadge(e.days_left);
+  const daysTxt = e.days_left === 0 ? '今天' : (e.days_left === 1 ? '明天' : e.days_left + ' 天');
+  const nameHtml = e.exam.url
+    ? `<a href="${e.exam.url}" target="_blank" rel="noopener">${e.exam.name}</a>`
+    : e.exam.name;
+  const inferredTag = e.exam.inferred ? `<span class="tag inferred">推算</span>` : `<span class="tag source">官方</span>`;
+  const subCatTag = e.exam.sub_category ? `<span class="tag">${e.exam.sub_category}</span>` : '';
+  const noteHtml = e.exam.note ? `<div class="card-sub"><b>备注：</b>${e.exam.note}</div>` : '';
+  return `
+    <div class="card">
+      <div class="card-top">
+        <div class="left">
+          <div class="name">${nameHtml}</div>
+          <div class="card-meta">
+            <span class="tag evt-${e.event_type}">${e.event_type}</span>
+            <span class="tag">${e.date}</span>
+            <span>${e.exam.category}</span>
+            ${subCatTag}
+            ${inferredTag}
+            <span>${u.label}</span>
+          </div>
+        </div>
+        <div class="right">
+          <div class="days ${daysColor(e.days_left)}">${daysTxt}</div>
+          <div class="card-meta"><span>后</span></div>
+        </div>
+      </div>
+      ${noteHtml}
+    </div>`;
+}
 
+/* ---------- 全部考试视图 ---------- */
+function renderAllExamCard(ex) {
+  const inferredTag = ex.inferred ? `<span class="tag inferred">推算</span>` : `<span class="tag source">官方</span>`;
+  const subCatTag = ex.sub_category ? `<span class="tag">${ex.sub_category}</span>` : '';
+  const nameHtml = ex.url ? `<a href="${ex.url}" target="_blank" rel="noopener">${ex.name}</a>` : ex.name;
+  const dateHtml = ex.exam_date ? `<b>考试日</b> ${ex.exam_date}` : '<span style="color:var(--text-3)">考试日待官方公布</span>';
+  const regHtml = ex.register_start || ex.register_end
+    ? `<b>报名</b> ${ex.register_start || '?'} → ${ex.register_end || '?'}`
+    : (ex.history ? `<b>报名</b> ${ex.history[0]?.register_period || '按历史规律'}` : '<span style="color:var(--text-3)">报名时间待官方公布</span>');
+  const sourceHtml = ex.source_authority ? `<b>主管</b> ${ex.source_authority}` : '';
+  const noteHtml = ex.note ? `<div style="margin-top:4px;color:var(--text-2)">${ex.note}</div>` : '';
+  const historyHtml = ex.history && ex.history.length
+    ? `<div style="margin-top:4px;color:var(--text-3);font-size:11px">📅 历年：${ex.history.map(h => h.year + '年 ' + (h.exam_date || (h.skill_exam + ' 技能 / ' + h.comprehensive_exam + ' 综合'))).join('；')}</div>`
+    : '';
+  return `
+    <div class="card">
+      <div class="name" style="margin-bottom:6px">${nameHtml}</div>
+      <div class="card-meta" style="margin-bottom:6px">
+        <span>${ex.category}</span>
+        ${subCatTag}
+        ${inferredTag}
+      </div>
+      <div style="font-size:12px;color:var(--text-2);line-height:1.7">
+        <div>${dateHtml}</div>
+        <div>${regHtml}</div>
+        ${sourceHtml ? `<div>${sourceHtml}</div>` : ''}
+      </div>
+      ${noteHtml}
+      ${historyHtml}
+    </div>`;
+}
+
+/* ---------- 分组渲染 ---------- */
 function groupByUrgency(events) {
-  const groups = {
-    'critical': [],   // <= 3 天
-    'week':     [],   // 4-7 天
-    'twoweek':  [],   // 8-14 天
-    'later':    [],   // 15-30 天
-  };
+  const groups = { critical: [], week: [], twoweek: [], later: [] };
   for (const e of events) {
     if (e.days_left <= 3) groups.critical.push(e);
     else if (e.days_left <= 7) groups.week.push(e);
@@ -248,50 +311,22 @@ function groupByUrgency(events) {
   return groups;
 }
 
-function eventCard(e) {
-  const u = urgencyBadge(e.days_left);
-  const daysTxt = e.days_left === 0 ? '今天' : (e.days_left === 1 ? '明天' : e.days_left + ' 天');
-  const tagClass = 'tag evt-' + e.event_type;
-  const nameHtml = e.url
-    ? `<a href="${e.url}" target="_blank" rel="noopener">${e.name}</a>`
-    : e.name;
-  return `
-    <div class="card">
-      <div class="left">
-        <div class="name">${nameHtml}</div>
-        <div class="meta">
-          <span class="${tagClass}">${e.event_type}</span>
-          <span>${e.date}</span>
-          <span class="tag">${e.category}</span>
-          <span>${u.label}</span>
-        </div>
-      </div>
-      <div class="right">
-        <div class="days ${daysColor(e.days_left)}">${e.days_left < 0 ? '已过' : daysTxt}</div>
-        <div class="days-label">${e.days_left <= 0 ? '' : '后'}</div>
-      </div>
-    </div>`;
+function render() {
+  const container = document.getElementById('content');
+  if (currentView === 'window') {
+    renderWindowView(container);
+  } else {
+    renderAllView(container);
+  }
 }
 
-function render() {
-  // 过滤
-  const q = (document.getElementById('search').value || '').trim().toLowerCase();
-  const month = document.getElementById('filter-month').value;
-  const type = document.getElementById('filter-type').value;
-
+function renderWindowView(container) {
   let events = allEvents;
-  if (currentTab !== 'all') events = events.filter(e => e.category === currentTab);
-  if (q) events = events.filter(e => e.name.toLowerCase().includes(q));
-  if (month) events = events.filter(e => e.date.startsWith(month));
-  if (type) events = events.filter(e => e.event_type === type);
-
-  const container = document.getElementById('content');
-
+  if (currentTab !== 'all') events = events.filter(e => e.exam.category === currentTab);
   if (events.length === 0) {
-    container.innerHTML = '<div class="empty">当前筛选条件下无 30 天窗口内事件</div>';
+    container.innerHTML = '<div class="empty">当前筛选下无 30 天窗口内事件</div>';
     return;
   }
-
   const groups = groupByUrgency(events);
   let html = '';
   const map = [
@@ -302,18 +337,69 @@ function render() {
   ];
   for (const [key, title, badge] of map) {
     if (groups[key].length === 0) continue;
-    html += `<div class="group">
-      <div class="group-title">${title} <span class="badge ${badge}">${groups[key].length}</span></div>`;
-    html += groups[key].map(eventCard).join('');
+    html += `<div class="group"><div class="group-title">${title} <span class="badge ${badge}">${groups[key].length}</span></div>`;
+    html += groups[key].map(renderEventCard).join('');
     html += '</div>';
   }
   container.innerHTML = html;
 }
 
+function renderAllView(container) {
+  const q = (document.getElementById('search').value || '').trim().toLowerCase();
+  const month = document.getElementById('filter-month').value;
+  const type = document.getElementById('filter-type').value;
+  let exams = allExams;
+  if (currentTab === '职业资格-准入-专业') exams = exams.filter(e => e.sub_category === '准入类-专业技术人员');
+  else if (currentTab === '职业资格-水平-专业') exams = exams.filter(e => e.sub_category === '水平评价类-专业技术人员');
+  else if (currentTab === '职业资格-准入-技能') exams = exams.filter(e => e.sub_category === '准入类-技能人员');
+  else if (currentTab === '职业资格') exams = exams.filter(e => e.category === '职业资格');
+  else if (currentTab === '学历提升') exams = exams.filter(e => e.category === '学历提升');
+  if (q) exams = exams.filter(e => e.name.toLowerCase().includes(q));
+  if (month) exams = exams.filter(e => e.exam_date?.startsWith(month) || e.history?.some(h => h.exam_date?.startsWith(month)));
+  if (type) exams = exams.filter(e => e.exam_date || e.history?.length);
+  // 按考试日期排序（无日期的排到最后）
+  exams.sort((a, b) => {
+    const da = a.exam_date || (a.history?.[0]?.exam_date || '9999');
+    const db = b.exam_date || (b.history?.[0]?.exam_date || '9999');
+    return da.localeCompare(db);
+  });
+  if (exams.length === 0) {
+    container.innerHTML = '<div class="empty">当前筛选条件下无考试项目</div>';
+    return;
+  }
+  container.innerHTML = exams.map(renderAllExamCard).join('');
+}
+
+/* ---------- Tabs / 筛选 ---------- */
+function fillTabs() {
+  const tabs = document.getElementById('tabs');
+  const groups = [
+    ['all', '全部', allExams.length],
+    ['职业资格', '职业资格', allExams.filter(e => e.category === '职业资格').length],
+    ['职业资格-准入-专业', '· 准入（专技）', allExams.filter(e => e.sub_category === '准入类-专业技术人员').length],
+    ['职业资格-水平-专业', '· 水平（专技）', allExams.filter(e => e.sub_category === '水平评价类-专业技术人员').length],
+    ['职业资格-准入-技能', '· 准入（技能）', allExams.filter(e => e.sub_category === '准入类-技能人员').length],
+    ['学历提升', '学历提升', allExams.filter(e => e.category === '学历提升').length],
+  ];
+  tabs.innerHTML = groups.filter(g => g[2] > 0).map(([key, label, cnt]) =>
+    `<button class="tab ${key === currentTab ? 'active' : ''}" data-tab="${key}">${label} <span class="count">${cnt}</span></button>`
+  ).join('');
+  tabs.querySelectorAll('.tab').forEach(el => {
+    el.addEventListener('click', () => {
+      currentTab = el.dataset.tab;
+      fillTabs();
+      render();
+    });
+  });
+}
+
 function fillMonths() {
   const sel = document.getElementById('filter-month');
   const months = new Set();
-  for (const e of allEvents) months.add(e.date.slice(0, 7));
+  for (const e of allExams) {
+    if (e.exam_date) months.add(e.exam_date.slice(0, 7));
+    if (e.history) for (const h of e.history) if (h.exam_date) months.add(h.exam_date.slice(0, 7));
+  }
   Array.from(months).sort().forEach(m => {
     const o = document.createElement('option');
     o.value = m; o.textContent = m;
@@ -322,20 +408,18 @@ function fillMonths() {
 }
 
 function updateStats() {
-  const total = allEvents.length;
-  const zi = allEvents.filter(e => e.category === '职业资格').length;
-  const xue = allEvents.filter(e => e.category === '学历提升').length;
+  const total = allExams.length;
+  const zi = allExams.filter(e => e.category === '职业资格').length;
+  const xue = allExams.filter(e => e.category === '学历提升').length;
+  const published = allExams.filter(e => e.exam_date).length;
+  const inferred = allExams.filter(e => e.inferred).length;
   const critical = allEvents.filter(e => e.days_left <= 3).length;
-
-  document.getElementById('cnt-all').textContent = total;
-  document.getElementById('cnt-zi').textContent = zi;
-  document.getElementById('cnt-xue').textContent = xue;
-
   const statsEl = document.getElementById('stats');
   statsEl.innerHTML = `
-    <div class="stat"><b>${total}</b> 项 30 天内</div>
-    ${critical > 0 ? `<div class="stat" style="color:var(--red);border-color:var(--red)"><b>${critical}</b> 项紧急（≤3 天）</div>` : ''}
+    <div class="stat"><b>${total}</b> 项考试</div>
     <div class="stat">职业资格 <b>${zi}</b> · 学历提升 <b>${xue}</b></div>
+    <div class="stat">已公布 <b>${published}</b> · 推算 <b>${inferred}</b></div>
+    ${currentView === 'window' && critical > 0 ? `<div class="stat" style="color:var(--red);border-color:var(--red)"><b>${critical}</b> 项紧急（≤3 天）</div>` : ''}
   `;
 }
 
@@ -347,8 +431,14 @@ function setSubtitle() {
 }
 
 /* ---------- 启动 ---------- */
-document.querySelectorAll('.tab').forEach(el => {
-  el.addEventListener('click', () => setTab(el.dataset.tab));
+document.querySelectorAll('.view-toggle button').forEach(el => {
+  el.addEventListener('click', () => {
+    currentView = el.dataset.view;
+    document.querySelectorAll('.view-toggle button').forEach(b => b.classList.toggle('active', b === el));
+    document.getElementById('filter-row').style.display = currentView === 'all' ? 'flex' : 'none';
+    updateStats();
+    render();
+  });
 });
 document.getElementById('search').addEventListener('input', render);
 document.getElementById('filter-month').addEventListener('change', render);
@@ -358,7 +448,9 @@ document.getElementById('filter-type').addEventListener('change', render);
   setSubtitle();
   try {
     const exams = await loadExams();
+    allExams = exams;
     allEvents = buildEvents(exams);
+    fillTabs();
     fillMonths();
     updateStats();
     render();

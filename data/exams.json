@@ -3,351 +3,1254 @@
     "id": "2026-zhongji-anquan",
     "name": "中级注册安全工程师",
     "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
     "register_start": "2026-08-04",
     "register_end": "2026-08-25",
     "exam_date": "2026-10-24",
-    "url": "https://www.cpta.com.cn/examNotice/2218.html"
+    "url": "https://www.cpta.com.cn/examNotice/2218.html",
+    "source_authority": "应急管理部、人社部",
+    "note": "全国统一考试",
+    "inferred": false
   },
   {
     "id": "2026-yiji-zaojia",
     "name": "一级造价工程师",
     "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
     "register_start": "2026-07-24",
     "register_end": "2026-08-18",
     "exam_date": "2026-10-17",
-    "url": "https://www.cpta.com.cn/examNotice/2207.html"
+    "url": "https://www.cpta.com.cn/examNotice/2207.html",
+    "source_authority": "住建部、交通运输部、水利部、人社部",
+    "note": "",
+    "inferred": false
+  },
+  {
+    "id": "2026-erji-zaojia",
+    "name": "二级造价工程师",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "各省自主举行",
+    "note": "由各省、自治区、直辖市自行组织",
+    "history": [
+      {"year": 2024, "exam_date": "2024-11-10", "register_period": "各省不同"},
+      {"year": 2023, "exam_date": "2023-11-12", "register_period": "各省不同"}
+    ],
+    "inferred": true
   },
   {
     "id": "2026-yiji-xiaofang",
     "name": "一级注册消防工程师",
     "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
     "register_start": "2026-09-01",
     "register_end": "2026-09-11",
     "exam_date": "2026-11-07",
-    "url": "https://www.cpta.com.cn/examNotice/2224.html"
+    "url": "https://www.cpta.com.cn/examNotice/2224.html",
+    "source_authority": "应急管理部、人社部",
+    "note": "",
+    "inferred": false
   },
   {
     "id": "2026-falv-zhuguan",
     "name": "法律职业资格（主观题）",
     "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
     "register_start": "2026-09-12",
     "register_end": "2026-09-30",
     "exam_date": "2026-10-18",
-    "url": "https://www.cpta.com.cn/"
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "司法部",
+    "note": "客观题 9月考，主观题次月考",
+    "inferred": false
+  },
+  {
+    "id": "2026-falv-keguan",
+    "name": "法律职业资格（客观题）",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "2026-06-15",
+    "register_end": "2026-07-05",
+    "exam_date": "2026-09-12",
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "司法部",
+    "note": "",
+    "inferred": false
   },
   {
     "id": "2026-zhuce-cehui",
     "name": "注册测绘师",
     "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
     "register_start": "2026-07-15",
     "register_end": "2026-07-31",
     "exam_date": "2026-09-05",
-    "url": "https://www.cpta.com.cn/"
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "自然资源部、人社部",
+    "note": "",
+    "inferred": false
   },
   {
     "id": "2026-yiji-jianzao",
     "name": "一级建造师",
     "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
     "register_start": "2026-06-10",
     "register_end": "2026-06-30",
     "exam_date": "2026-09-12",
-    "url": "https://www.cpta.com.cn/"
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "住建部、人社部",
+    "note": "",
+    "inferred": false
+  },
+  {
+    "id": "2026-erji-jianzao",
+    "name": "二级建造师",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "各省自主举行",
+    "note": "由各省、自治区、直辖市自行组织",
+    "history": [
+      {"year": 2025, "exam_date": "2025-06-07", "register_period": "2-6月"},
+      {"year": 2024, "exam_date": "2024-06-08", "register_period": "2-6月"}
+    ],
+    "inferred": true
   },
   {
     "id": "2026-jianli-gongchengshi",
     "name": "监理工程师",
     "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
     "register_start": "2026-03-13",
     "register_end": "2026-03-24",
     "exam_date": "2026-05-16",
-    "url": "https://www.cpta.com.cn/"
-  },
-  {
-    "id": "2026-zhuce-jiashi",
-    "name": "中级注册安全工程师（补考）",
-    "category": "职业资格",
-    "register_start": "2026-08-04",
-    "register_end": "2026-08-25",
-    "exam_date": "2026-10-25",
-    "url": "https://www.cpta.com.cn/"
-  },
-  {
-    "id": "2026-gaoji-jingji",
-    "name": "高级经济专业技术资格",
-    "category": "职业资格",
-    "register_start": "2026-03-27",
-    "register_end": "2026-04-08",
-    "exam_date": "2026-05-30",
-    "url": "https://www.cpta.com.cn/"
-  },
-  {
-    "id": "2026-chuji-jingji",
-    "name": "初级/中级经济专业技术资格",
-    "category": "职业资格",
-    "register_start": "2026-07-22",
-    "register_end": "2026-08-12",
-    "exam_date": "2026-11-07",
-    "url": "https://www.cpta.com.cn/"
-  },
-  {
-    "id": "2026-zhuce-huijishi",
-    "name": "注册会计师（专业阶段）",
-    "category": "职业资格",
-    "register_start": "2026-04-07",
-    "register_end": "2026-04-30",
-    "exam_date": "2026-08-29",
-    "url": "https://www.cpta.com.cn/"
-  },
-  {
-    "id": "2026-zhuce-huijishi-zonghe",
-    "name": "注册会计师（综合阶段）",
-    "category": "职业资格",
-    "register_start": "2026-04-07",
-    "register_end": "2026-04-30",
-    "exam_date": "2026-08-30",
-    "url": "https://www.cpta.com.cn/"
-  },
-  {
-    "id": "2026-kuaiji-zhongji",
-    "name": "会计专业技术资格（中级）",
-    "category": "职业资格",
-    "register_start": "2026-06-12",
-    "register_end": "2026-07-02",
-    "exam_date": "2026-09-05",
-    "url": "https://www.cpta.com.cn/"
-  },
-  {
-    "id": "2026-shuiwushi",
-    "name": "税务师",
-    "category": "职业资格",
-    "register_start": "2026-05-10",
-    "register_end": "2026-07-15",
-    "exam_date": "2026-11-14",
-    "url": "https://www.cpta.com.cn/"
-  },
-  {
-    "id": "2026-zhiye-yaoshi",
-    "name": "执业药师（药学/中药学）",
-    "category": "职业资格",
-    "register_start": "2026-07-15",
-    "register_end": "2026-08-15",
-    "exam_date": "2026-10-31",
-    "url": "https://www.cpta.com.cn/"
-  },
-  {
-    "id": "2026-daoyou",
-    "name": "导游资格",
-    "category": "职业资格",
-    "register_start": "2026-07-15",
-    "register_end": "2026-09-15",
-    "exam_date": "2026-11-21",
-    "url": "https://www.cpta.com.cn/"
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "住建部、交通运输部、水利部、人社部",
+    "note": "",
+    "inferred": false
   },
   {
     "id": "2026-yijijianzaoshi",
     "name": "注册建筑师（一级）",
     "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
     "register_start": "2026-03-12",
     "register_end": "2026-03-20",
     "exam_date": "2026-05-16",
-    "url": "https://www.cpta.com.cn/"
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "全国注册建筑师管理委员会",
+    "note": "",
+    "inferred": false
   },
   {
-    "id": "2026-zhuanli",
-    "name": "专利代理师",
+    "id": "2026-erjijianzaoshi",
+    "name": "注册建筑师（二级）",
     "category": "职业资格",
-    "register_start": "2026-05-25",
-    "register_end": "2026-06-15",
-    "exam_date": "2026-07-04",
-    "url": "https://www.cpta.com.cn/"
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "2026-03-12",
+    "register_end": "2026-03-20",
+    "exam_date": "2026-05-16",
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "全国注册建筑师管理委员会",
+    "note": "",
+    "inferred": false
   },
   {
-    "id": "2026-zhibing-yishi",
-    "name": "执业兽医",
+    "id": "2026-fangdichan-gujia",
+    "name": "房地产估价师",
     "category": "职业资格",
-    "register_start": "2026-05-15",
-    "register_end": "2026-06-15",
-    "exam_date": "2026-07-12",
-    "url": "https://www.cpta.com.cn/"
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-11-07",
+    "url": "",
+    "source_authority": "住建部、自然资源部",
+    "note": "往年 11 月第二个周末",
+    "history": [
+      {"year": 2024, "exam_date": "2024-11-09", "register_period": "8-10月"},
+      {"year": 2023, "exam_date": "2023-11-11", "register_period": "8-10月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-zhuce-huijishi",
+    "name": "注册会计师（专业阶段）",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "2026-04-07",
+    "register_end": "2026-04-30",
+    "exam_date": "2026-08-29",
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "财政部",
+    "note": "",
+    "inferred": false
+  },
+  {
+    "id": "2026-zhuce-huijishi-zonghe",
+    "name": "注册会计师（综合阶段）",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "2026-04-07",
+    "register_end": "2026-04-30",
+    "exam_date": "2026-08-30",
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "财政部",
+    "note": "",
+    "inferred": false
+  },
+  {
+    "id": "2026-jiaoshi",
+    "name": "教师资格",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "2026-01-09",
+    "register_end": "2026-01-12",
+    "exam_date": "2026-03-07",
+    "url": "https://ntce.neea.edu.cn/",
+    "source_authority": "教育部",
+    "note": "上下半年各一次；下半年 9月考试",
+    "history": [
+      {"year": 2025, "exam_date": "2025-03-08", "register_period": "1月"},
+      {"year": 2025, "exam_date_2": "2025-09-13", "register_period_2": "7月"}
+    ],
+    "inferred": false
   },
   {
     "id": "2026-zhongji-jiliang",
     "name": "注册计量师",
     "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
     "register_start": "2026-03-30",
     "register_end": "2026-04-10",
     "exam_date": "2026-06-13",
-    "url": "https://www.cpta.com.cn/"
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "市场监管总局、人社部",
+    "note": "",
+    "inferred": false
   },
   {
-    "id": "2026-fanyi",
-    "name": "翻译专业资格（一/二/三级）",
+    "id": "2026-zhuanli",
+    "name": "专利代理师",
     "category": "职业资格",
-    "register_start": "2026-04-15",
-    "register_end": "2026-05-15",
-    "exam_date": "2026-06-27",
-    "url": "https://www.cpta.com.cn/"
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "2026-05-25",
+    "register_end": "2026-06-15",
+    "exam_date": "2026-07-04",
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "国家知识产权局",
+    "note": "",
+    "inferred": false
   },
   {
-    "id": "2026-shehuigongzuo",
-    "name": "社会工作者职业资格",
+    "id": "2026-paimai",
+    "name": "拍卖师",
     "category": "职业资格",
-    "register_start": "2026-03-17",
-    "register_end": "2026-03-26",
-    "exam_date": "2026-05-23",
-    "url": "https://www.cpta.com.cn/"
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-08-29",
+    "url": "",
+    "source_authority": "中国拍卖行业协会",
+    "note": "纸笔作答 8月底、实际操作 8月底",
+    "history": [
+      {"year": 2024, "exam_date": "2024-08-31", "register_period": "5-7月"},
+      {"year": 2023, "exam_date": "2023-08-26", "register_period": "5-7月"}
+    ],
+    "inferred": false
   },
   {
-    "id": "2026-jianshe-gongcheng",
-    "name": "勘察设计注册工程师（多专业）",
+    "id": "2026-zhiye-yaoshi",
+    "name": "执业药师（药学/中药学）",
     "category": "职业资格",
-    "register_start": "2026-08-15",
-    "register_end": "2026-09-15",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "2026-07-15",
+    "register_end": "2026-08-15",
     "exam_date": "2026-10-31",
-    "url": "https://www.cpta.com.cn/"
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "国家药监局、人社部",
+    "note": "",
+    "inferred": false
   },
   {
-    "id": "2026-xinwen-jizhe",
-    "name": "新闻记者职业资格",
+    "id": "2026-daoyou",
+    "name": "导游资格",
     "category": "职业资格",
-    "register_start": "2026-09-01",
-    "register_end": "2026-09-30",
-    "exam_date": "2026-10-24",
-    "url": "https://www.cpta.com.cn/examNotice/2221.html"
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "2026-07-15",
+    "register_end": "2026-09-15",
+    "exam_date": "2026-11-21",
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "文化和旅游部",
+    "note": "",
+    "inferred": false
   },
   {
-    "id": "2026-yinhang",
-    "name": "银行业专业人员职业资格",
+    "id": "2026-yanchu-jingji",
+    "name": "演出经纪人员资格",
     "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-05-30",
+    "url": "",
+    "source_authority": "文化和旅游部",
+    "note": "往年 5月底",
+    "history": [
+      {"year": 2025, "exam_date": "2025-05-31", "register_period": "4-5月"},
+      {"year": 2024, "exam_date": "2024-06-01", "register_period": "4-5月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-yishi",
+    "name": "医师资格考试（医师）",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-08-21",
+    "url": "https://www.nmec.org.cn/",
+    "source_authority": "国家卫生健康委",
+    "note": "实践技能 6月、医学综合 8月",
+    "history": [
+      {"year": 2025, "skill_exam": "2025-06-14", "comprehensive_exam": "2025-08-22", "register_period": "2月"},
+      {"year": 2024, "skill_exam": "2024-06-15", "comprehensive_exam": "2024-08-16", "register_period": "2月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-hushi",
+    "name": "护士执业资格",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-04-11",
+    "url": "https://www.21wecan.com/",
+    "source_authority": "国家卫生健康委、人社部",
+    "note": "往年 4 月中下旬",
+    "history": [
+      {"year": 2025, "exam_date": "2025-04-26", "register_period": "12月-1月"},
+      {"year": 2024, "exam_date": "2024-04-27", "register_period": "12月-1月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-muying",
+    "name": "母婴保健技术服务人员资格",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "国家卫生健康委",
+    "note": "各省卫生健康委单独组织",
+    "inferred": true
+  },
+  {
+    "id": "2026-zhiye-shouyi",
+    "name": "执业兽医",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
     "register_start": "2026-05-15",
     "register_end": "2026-06-15",
-    "exam_date": "2026-06-13",
-    "url": "https://www.cpta.com.cn/"
+    "exam_date": "2026-07-12",
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "农业农村部",
+    "note": "",
+    "inferred": false
+  },
+  {
+    "id": "2026-chuanyuan",
+    "name": "船员资格（含渔业船员）",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "交通运输部、农业农村部",
+    "note": "由各海员考试中心按月度组织",
+    "inferred": true
+  },
+  {
+    "id": "2026-yanshichuan",
+    "name": "注册验船师",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-11-07",
+    "url": "",
+    "source_authority": "交通运输部、人社部",
+    "note": "往年 11 月",
+    "history": [
+      {"year": 2024, "exam_date": "2024-11-09", "register_period": "9-10月"},
+      {"year": 2023, "exam_date": "2023-11-11", "register_period": "9-10月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-heanquan-wu sun",
+    "name": "核安全设备无损检验人员资格",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "生态环境部、国防科工局",
+    "note": "由主管部门按需组织",
+    "inferred": true
+  },
+  {
+    "id": "2026-hesheshi-caozuo",
+    "name": "核设施操纵人员资格",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "生态环境部、国家能源局、国防科工局",
+    "note": "由主管部门按需组织",
+    "inferred": true
+  },
+  {
+    "id": "2026-zhuce-heanqun",
+    "name": "注册核安全工程师",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-09-05",
+    "url": "",
+    "source_authority": "生态环境部、人社部",
+    "note": "往年 9 月",
+    "history": [
+      {"year": 2024, "exam_date": "2024-09-07", "register_period": "6-7月"},
+      {"year": 2023, "exam_date": "2023-09-23", "register_period": "6-7月"}
+    ],
+    "inferred": false
   },
   {
     "id": "2026-zhuce-chengxiangguihua",
     "name": "注册城乡规划师",
     "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
     "register_start": "2026-07-15",
     "register_end": "2026-08-15",
     "exam_date": "2026-09-12",
-    "url": "https://www.cpta.com.cn/"
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "自然资源部、人社部",
+    "note": "",
+    "inferred": false
   },
   {
-    "id": "2026-jianshe-jijian",
-    "name": "建设工程监理工程师（土木建筑工程）",
+    "id": "2026-kancha-sheji",
+    "name": "勘察设计注册工程师",
     "category": "职业资格",
-    "register_start": "2026-03-15",
-    "register_end": "2026-03-25",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "2026-08-15",
+    "register_end": "2026-09-15",
+    "exam_date": "2026-10-31",
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "住建部及相关部委",
+    "note": "含结构/岩土/电气/化工等 10+ 专业",
+    "inferred": false
+  },
+  {
+    "id": "2026-tezhongshebei",
+    "name": "特种设备检验、检测人员资格",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "市场监管总局",
+    "note": "由各省级特种设备检验机构按需组织",
+    "inferred": true
+  },
+  {
+    "id": "2026-guangdian-boYin",
+    "name": "广播电视播音员、主持人资格",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-10-31",
+    "url": "",
+    "source_authority": "广电总局",
+    "note": "往年 10 月底",
+    "history": [
+      {"year": 2024, "exam_date": "2024-10-26", "register_period": "9月"},
+      {"year": 2023, "exam_date": "2023-10-28", "register_period": "9月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-xinwen-jizhe",
+    "name": "新闻记者职业资格",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "2026-09-01",
+    "register_end": "2026-09-30",
+    "exam_date": "2026-10-24",
+    "url": "https://www.cpta.com.cn/examNotice/2221.html",
+    "source_authority": "国家新闻出版署",
+    "note": "",
+    "inferred": false
+  },
+  {
+    "id": "2026-hangkong-renyuan",
+    "name": "航空人员",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "中国民航局",
+    "note": "含空勤/地面/航空安全员等，由民航局按月组织",
+    "inferred": true
+  },
+  {
+    "id": "2026-zhiye-yaoshi-zsj",
+    "name": "中国委托公证人资格（香港、澳门）",
+    "category": "职业资格",
+    "sub_category": "准入类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "司法部",
+    "note": "由司法部组织，每年一次",
+    "inferred": true
+  },
+  {
+    "id": "2026-gaoji-jingji",
+    "name": "高级经济专业技术资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "2026-03-27",
+    "register_end": "2026-04-08",
+    "exam_date": "2026-05-30",
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "人社部",
+    "note": "",
+    "inferred": false
+  },
+  {
+    "id": "2026-chuji-jingji",
+    "name": "初级/中级经济专业技术资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "2026-07-22",
+    "register_end": "2026-08-12",
+    "exam_date": "2026-11-07",
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "人社部",
+    "note": "",
+    "inferred": false
+  },
+  {
+    "id": "2026-kuaiji-gaoji",
+    "name": "会计专业技术资格（高级）",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
     "exam_date": "2026-05-16",
-    "url": "https://www.cpta.com.cn/"
+    "url": "",
+    "source_authority": "财政部、人社部",
+    "note": "往年 5 月",
+    "history": [
+      {"year": 2025, "exam_date": "2025-05-17", "register_period": "3-4月"},
+      {"year": 2024, "exam_date": "2024-05-18", "register_period": "3-4月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-kuaiji-chuji",
+    "name": "会计专业技术资格（初级）",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-05-16",
+    "url": "",
+    "source_authority": "财政部、人社部",
+    "note": "往年 5 月中旬",
+    "history": [
+      {"year": 2025, "exam_date": "2025-05-17", "register_period": "1-2月"},
+      {"year": 2024, "exam_date": "2024-05-18", "register_period": "1-2月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-kuaiji-zhongji",
+    "name": "会计专业技术资格（中级）",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "2026-06-12",
+    "register_end": "2026-07-02",
+    "exam_date": "2026-09-05",
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "财政部、人社部",
+    "note": "",
+    "inferred": false
+  },
+  {
+    "id": "2026-zichan-pinggu",
+    "name": "资产评估师",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-09-12",
+    "url": "",
+    "source_authority": "财政部、人社部、中国资产评估协会",
+    "note": "往年 9 月中旬",
+    "history": [
+      {"year": 2025, "exam_date": "2025-09-20", "register_period": "5-7月"},
+      {"year": 2024, "exam_date": "2024-09-15", "register_period": "5-7月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-shuiwushi",
+    "name": "税务师",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "2026-05-10",
+    "register_end": "2026-07-15",
+    "exam_date": "2026-11-14",
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "税务总局、人社部",
+    "note": "",
+    "inferred": false
+  },
+  {
+    "id": "2026-shenji",
+    "name": "审计专业技术资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-09-19",
+    "url": "",
+    "source_authority": "审计署、人社部",
+    "note": "往年 9 月",
+    "history": [
+      {"year": 2025, "exam_date": "2025-09-27", "register_period": "6-7月"},
+      {"year": 2024, "exam_date": "2024-09-22", "register_period": "6-7月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-tongxin",
+    "name": "通信专业技术人员职业资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-09-19",
+    "url": "",
+    "source_authority": "工信部、人社部",
+    "note": "往年 9 月",
+    "history": [
+      {"year": 2025, "exam_date": "2025-09-27", "register_period": "7-8月"},
+      {"year": 2024, "exam_date": "2024-09-21", "register_period": "7-8月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-jisuanji-rengao",
+    "name": "计算机技术与软件专业技术资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-05-23",
+    "url": "",
+    "source_authority": "工信部、人社部",
+    "note": "上下半年各一次；下半年 10月",
+    "history": [
+      {"year": 2025, "exam_date": "2025-05-24", "register_period": "3-4月"},
+      {"year": 2025, "exam_date_2": "2025-10-25", "register_period_2": "8-9月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-rengao-zgcs",
+    "name": "工程咨询（投资）专业技术人员职业资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-04-11",
+    "url": "",
+    "source_authority": "发改委、人社部、中国工程咨询协会",
+    "note": "往年 4 月",
+    "history": [
+      {"year": 2025, "exam_date": "2025-04-12", "register_period": "2-3月"},
+      {"year": 2024, "exam_date": "2024-04-13", "register_period": "2-3月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-shehuigongzuo",
+    "name": "社会工作者职业资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "2026-03-17",
+    "register_end": "2026-03-26",
+    "exam_date": "2026-05-23",
+    "url": "https://www.cpta.com.cn/",
+    "source_authority": "民政部、人社部",
+    "note": "",
+    "inferred": false
+  },
+  {
+    "id": "2026-weisheng-zhuanye",
+    "name": "卫生专业技术资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-04-11",
+    "url": "",
+    "source_authority": "国家卫生健康委、人社部",
+    "note": "往年 4 月",
+    "history": [
+      {"year": 2025, "exam_date": "2025-04-12", "register_period": "12月-1月"},
+      {"year": 2024, "exam_date": "2024-04-13", "register_period": "12月-1月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-huanjing-yingxiang",
+    "name": "环境影响评价工程师",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-06-13",
+    "url": "",
+    "source_authority": "生态环境部、人社部",
+    "note": "往年 6 月",
+    "history": [
+      {"year": 2025, "exam_date": "2025-06-14", "register_period": "3-4月"},
+      {"year": 2024, "exam_date": "2024-06-15", "register_period": "3-4月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-jidongche-jiance",
+    "name": "机动车检测维修专业技术人员职业资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-06-13",
+    "url": "",
+    "source_authority": "交通运输部、人社部",
+    "note": "往年 6 月",
+    "history": [
+      {"year": 2025, "exam_date": "2025-06-14", "register_period": "3-5月"},
+      {"year": 2024, "exam_date": "2024-06-15", "register_period": "3-5月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-gonglu-shuigong",
+    "name": "公路水运工程试验检测专业技术人员职业资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-10-24",
+    "url": "",
+    "source_authority": "交通运输部、人社部",
+    "note": "往年 10 月",
+    "history": [
+      {"year": 2025, "exam_date": "2025-10-25", "register_period": "8-9月"},
+      {"year": 2024, "exam_date": "2024-10-26", "register_period": "8-9月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-shuili-zhiliang",
+    "name": "水利工程质量检测员资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "水利部",
+    "note": "由水利部按需组织",
+    "inferred": true
+  },
+  {
+    "id": "2026-fangdichan-jingji",
+    "name": "房地产经纪专业人员职业资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-05-23",
+    "url": "",
+    "source_authority": "住建部、人社部、中国房地产估价师与房地产经纪人学会",
+    "note": "上、下半年各一次；下半年 10月",
+    "history": [
+      {"year": 2025, "exam_date": "2025-05-24", "register_period": "4月"},
+      {"year": 2025, "exam_date_2": "2025-10-25", "register_period_2": "8-9月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-budongchan-dengji",
+    "name": "不动产登记代理专业人员职业资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-06-27",
+    "url": "",
+    "source_authority": "自然资源部、中国土地估价师与土地登记代理人协会",
+    "note": "往年 6 月底",
+    "history": [
+      {"year": 2024, "exam_date": "2024-06-22", "register_period": "4-5月"},
+      {"year": 2023, "exam_date": "2023-06-24", "register_period": "4-5月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-kuangyequ",
+    "name": "矿业权评估师",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-10-31",
+    "url": "",
+    "source_authority": "自然资源部、中国矿业权评估师协会",
+    "note": "往年 10 月底",
+    "history": [
+      {"year": 2025, "exam_date": "2025-10-25", "register_period": "8-9月"},
+      {"year": 2024, "exam_date": "2024-10-26", "register_period": "8-9月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-renzheng-renyuan",
+    "name": "认证人员职业资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "市场监管总局",
+    "note": "由认证机构按需组织",
+    "inferred": true
+  },
+  {
+    "id": "2026-shebei-jianli",
+    "name": "设备监理师",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-09-05",
+    "url": "",
+    "source_authority": "市场监管总局、人社部",
+    "note": "往年 9 月",
+    "history": [
+      {"year": 2025, "exam_date": "2025-09-06", "register_period": "6-7月"},
+      {"year": 2024, "exam_date": "2024-09-07", "register_period": "6-7月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-tongji",
+    "name": "统计专业技术资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-06-28",
+    "url": "",
+    "source_authority": "国家统计局、人社部",
+    "note": "往年 6 月底",
+    "history": [
+      {"year": 2025, "exam_date": "2025-06-29", "register_period": "4-5月"},
+      {"year": 2024, "exam_date": "2024-06-30", "register_period": "4-5月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-chuban",
+    "name": "出版专业技术人员职业资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-09-19",
+    "url": "",
+    "source_authority": "国家新闻出版署、人社部",
+    "note": "往年 9 月",
+    "history": [
+      {"year": 2025, "exam_date": "2025-09-13", "register_period": "7-8月"},
+      {"year": 2024, "exam_date": "2024-09-21", "register_period": "7-8月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-yinhang",
+    "name": "银行业专业人员职业资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-06-13",
+    "url": "",
+    "source_authority": "银保监会、人社部、中国银行业协会",
+    "note": "上、下半年各一次；下半年 10月",
+    "history": [
+      {"year": 2025, "exam_date": "2025-06-14", "register_period": "4-5月"},
+      {"year": 2025, "exam_date_2": "2025-10-25", "register_period_2": "8-9月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-jingsuan",
+    "name": "精算师",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-05-23",
+    "url": "",
+    "source_authority": "银保监会、人社部、中国精算师协会",
+    "note": "上、下半年各一次；下半年 10月",
+    "history": [
+      {"year": 2025, "exam_date": "2025-05-24", "register_period": "3-4月"},
+      {"year": 2025, "exam_date_2": "2025-10-25", "register_period_2": "8-9月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-zhengquan-qihuo",
+    "name": "证券期货基金业从业人员资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-05-16",
+    "url": "",
+    "source_authority": "证监会",
+    "note": "证券业 6/9月、期货 5月、基金 5/11月，按协会公告",
+    "history": [
+      {"year": 2025, "exam_date": "2025-05-17", "register_period": "滚动报名"},
+      {"year": 2025, "exam_date_2": "2025-09-13", "register_period_2": "滚动报名"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-wenwu-baohu",
+    "name": "文物保护工程从业资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-09-05",
+    "url": "",
+    "source_authority": "国家文物局",
+    "note": "往年 9 月",
+    "history": [
+      {"year": 2025, "exam_date": "2025-09-06", "register_period": "7-8月"},
+      {"year": 2024, "exam_date": "2024-09-07", "register_period": "7-8月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-fanyi",
+    "name": "翻译专业资格",
+    "category": "职业资格",
+    "sub_category": "水平评价类-专业技术人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-06-27",
+    "url": "",
+    "source_authority": "中国外文局、人社部",
+    "note": "上、下半年各一次；下半年 11月",
+    "history": [
+      {"year": 2025, "exam_date": "2025-06-21", "register_period": "4-5月"},
+      {"year": 2025, "exam_date_2": "2025-11-15", "register_period_2": "9-10月"}
+    ],
+    "inferred": false
+  },
+  {
+    "id": "2026-handan-huo",
+    "name": "焊工",
+    "category": "职业资格",
+    "sub_category": "准入类-技能人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "生态环境部、国防科工局",
+    "note": "由相应行业主管部门按需组织",
+    "inferred": true
+  },
+  {
+    "id": "2026-baoan",
+    "name": "安全保护服务人员（保安员、民航安全检查员）",
+    "category": "职业资格",
+    "sub_category": "准入类-技能人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "公安部门、民航行业技能鉴定机构",
+    "note": "由各地公安部门与民航鉴定机构按需组织",
+    "inferred": true
+  },
+  {
+    "id": "2026-xiaofang-yingji",
+    "name": "消防和应急救援人员",
+    "category": "职业资格",
+    "sub_category": "准入类-技能人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "消防行业、应急管理部、国家林草局",
+    "note": "由各行业技能鉴定机构按月度组织",
+    "inferred": true
+  },
+  {
+    "id": "2026-xiaofang-sheshi",
+    "name": "消防设施操作员",
+    "category": "职业资格",
+    "sub_category": "准入类-技能人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "消防行业技能鉴定机构",
+    "note": "由各消防鉴定站按月度组织",
+    "inferred": true
+  },
+  {
+    "id": "2026-jianshen",
+    "name": "健身和娱乐场所服务人员（游泳救生员、社会体育指导员）",
+    "category": "职业资格",
+    "sub_category": "准入类-技能人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "体育行业技能鉴定机构",
+    "note": "由各地体育行业鉴定机构按需组织",
+    "inferred": true
+  },
+  {
+    "id": "2026-hangkong-fuwu",
+    "name": "航空运输服务人员（民航乘务员等）",
+    "category": "职业资格",
+    "sub_category": "准入类-技能人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "民航行业技能鉴定机构",
+    "note": "由民航行业鉴定机构按需组织",
+    "inferred": true
+  },
+  {
+    "id": "2026-weixian-huowu",
+    "name": "危险货物、化学品运输从业人员",
+    "category": "职业资格",
+    "sub_category": "准入类-技能人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "交通运输主管部门",
+    "note": "由各地交通运输部门按需组织",
+    "inferred": true
+  },
+  {
+    "id": "2026-daolu-yunshu",
+    "name": "道路运输从业人员",
+    "category": "职业资格",
+    "sub_category": "准入类-技能人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "交通运输主管部门",
+    "note": "由各地交通运输部门按月度组织",
+    "inferred": true
+  },
+  {
+    "id": "2026-tezuo",
+    "name": "特种作业人员",
+    "category": "职业资格",
+    "sub_category": "准入类-技能人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "应急管理部及行业主管部门",
+    "note": "由应急管理部门与各行业鉴定机构按月度组织",
+    "inferred": true
+  },
+  {
+    "id": "2026-jianzhu-tezuo",
+    "name": "建筑施工特种作业人员",
+    "category": "职业资格",
+    "sub_category": "准入类-技能人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "住房和城乡建设部",
+    "note": "由各地住建部门按月度组织",
+    "inferred": true
+  },
+  {
+    "id": "2026-tezhuang-anquan",
+    "name": "特种设备安全管理和作业人员",
+    "category": "职业资格",
+    "sub_category": "准入类-技能人员",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "",
+    "url": "",
+    "source_authority": "市场监管总局",
+    "note": "由各地市场监管部门按月度组织",
+    "inferred": true
   },
   {
     "id": "2026-yanjiusheng",
     "name": "全国硕士研究生招生考试",
     "category": "学历提升",
+    "sub_category": "学历考试",
     "register_start": "2025-10-10",
     "register_end": "2025-10-27",
     "exam_date": "2025-12-20",
-    "url": "https://yz.chsi.com.cn/"
+    "url": "https://yz.chsi.com.cn/",
+    "source_authority": "教育部",
+    "inferred": false
+  },
+  {
+    "id": "2026-guokao",
+    "name": "普通高等学校招生全国统一考试",
+    "category": "学历提升",
+    "sub_category": "学历考试",
+    "register_start": "",
+    "register_end": "",
+    "exam_date": "2026-06-07",
+    "url": "https://gaokao.neea.edu.cn/",
+    "source_authority": "教育部",
+    "inferred": false
   },
   {
     "id": "2026-chengren-gaokao",
     "name": "全国成人高校招生统一考试",
     "category": "学历提升",
+    "sub_category": "学历考试",
     "register_start": "2026-08-15",
     "register_end": "2026-09-15",
     "exam_date": "2026-10-24",
-    "url": "https://chengkao.neea.edu.cn/"
+    "url": "https://chengkao.neea.edu.cn/",
+    "source_authority": "教育部",
+    "inferred": false
   },
   {
     "id": "2026-zikao-04",
     "name": "高等教育自学考试（4 月）",
     "category": "学历提升",
+    "sub_category": "学历考试",
     "register_start": "2026-02-26",
     "register_end": "2026-03-07",
     "exam_date": "2026-04-11",
-    "url": "https://zikao.neea.edu.cn/"
+    "url": "https://zikao.neea.edu.cn/",
+    "source_authority": "教育部",
+    "inferred": false
   },
   {
     "id": "2026-zikao-10",
     "name": "高等教育自学考试（10 月）",
     "category": "学历提升",
+    "sub_category": "学历考试",
     "register_start": "2026-09-01",
     "register_end": "2026-09-15",
     "exam_date": "2026-10-24",
-    "url": "https://zikao.neea.edu.cn/"
-  },
-  {
-    "id": "2026-jiaoshi-shang",
-    "name": "中小学教师资格考试（上半年）",
-    "category": "学历提升",
-    "register_start": "2026-01-09",
-    "register_end": "2026-01-12",
-    "exam_date": "2026-03-07",
-    "url": "https://ntce.neea.edu.cn/"
-  },
-  {
-    "id": "2026-jiaoshi-xia",
-    "name": "中小学教师资格考试（下半年）",
-    "category": "学历提升",
-    "register_start": "2026-07-01",
-    "register_end": "2026-07-08",
-    "exam_date": "2026-09-12",
-    "url": "https://ntce.neea.edu.cn/"
+    "url": "https://zikao.neea.edu.cn/",
+    "source_authority": "教育部",
+    "inferred": false
   },
   {
     "id": "2026-cet-shang",
     "name": "大学英语四六级（CET）上半年",
     "category": "学历提升",
-    "register_start": "2026-03-15",
-    "register_end": "2026-04-15",
+    "sub_category": "学历考试",
+    "register_start": "",
+    "register_end": "",
     "exam_date": "2026-06-13",
-    "url": "https://cet.neea.edu.cn/"
+    "url": "https://cet.neea.edu.cn/",
+    "source_authority": "教育部",
+    "inferred": false
   },
   {
     "id": "2026-cet-xia",
     "name": "大学英语四六级（CET）下半年",
     "category": "学历提升",
-    "register_start": "2026-09-15",
-    "register_end": "2026-10-15",
+    "sub_category": "学历考试",
+    "register_start": "",
+    "register_end": "",
     "exam_date": "2026-12-12",
-    "url": "https://cet.neea.edu.cn/"
+    "url": "https://cet.neea.edu.cn/",
+    "source_authority": "教育部",
+    "inferred": false
   },
   {
     "id": "2026-ncre-03",
     "name": "全国计算机等级考试（3 月）",
     "category": "学历提升",
-    "register_start": "2026-01-06",
-    "register_end": "2026-01-15",
+    "sub_category": "学历考试",
+    "register_start": "",
+    "register_end": "",
     "exam_date": "2026-03-28",
-    "url": "https://ncre.neea.edu.cn/"
+    "url": "https://ncre.neea.edu.cn/",
+    "source_authority": "教育部",
+    "inferred": false
   },
   {
     "id": "2026-ncre-09",
     "name": "全国计算机等级考试（9 月）",
     "category": "学历提升",
-    "register_start": "2026-06-20",
-    "register_end": "2026-07-15",
+    "sub_category": "学历考试",
+    "register_start": "",
+    "register_end": "",
     "exam_date": "2026-09-19",
-    "url": "https://ncre.neea.edu.cn/"
-  },
-  {
-    "id": "2026-tongdeng-xueli",
-    "name": "同等学力申请硕士学位全国统考",
-    "category": "学历提升",
-    "register_start": "2026-03-10",
-    "register_end": "2026-04-10",
-    "exam_date": "2026-05-24",
-    "url": "https://tdxl.neea.edu.cn/"
-  },
-  {
-    "id": "2026-guokao-2026",
-    "name": "普通高等学校招生全国统一考试",
-    "category": "学历提升",
-    "register_start": "2025-10-15",
-    "register_end": "2025-11-15",
-    "exam_date": "2026-06-07",
-    "url": "https://gaokao.neea.edu.cn/"
+    "url": "https://ncre.neea.edu.cn/",
+    "source_authority": "教育部",
+    "inferred": false
   }
 ]
